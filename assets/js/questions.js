@@ -1,4 +1,4 @@
-// list of all questions, choices, and answers, 
+// Questions with choices/answers 
 var questions = [
     {
       title: "When a user views a page that utilizes Javascript, what is actually executing the script?",

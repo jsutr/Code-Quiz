@@ -9,7 +9,41 @@
     <link rel="stylesheet" href="./CSS/style.css" />
 </head>
 <body>
-    
+    <div class="leaderboard">
+        <a href="leaderboard.html">View Leaderboard</a>
+    </div>
+
+    <div class="timer">Time Remaining: <span id="time">0</span></div>
+
+    <section class="wrapper">
+        <div id="start-prompt" class="start">
+            <h1>
+                Javascript Quiz
+            </h1>
+            <p>
+                The following ten questions will test your basic knowledge of Javascript. Answer all the questions as quickly as you can without error. Each incorrect answers will lead to a 4 second time penalty. You can try as many times as you want to see how high you can score. Your scores are availale to view via "View Leaderboard". Good luck!
+            </p>
+            <button id="start">Begin Quiz</button>
+        </div>
+    </section>
+
+    <section id="questions" class="hide">
+        <h2 id="question"></h2>
+        <div id="answers" class="answers"></div>
+    </section>
+
+    <section id="end-quiz" class="hide">
+        <h2>
+            You finished!
+        </h2>
+        <p>
+            Your final score is <span id="score"></span>
+        </p>
+        <p>
+            Enter your initials: <input type="text" id="initials" max="3" />
+            <button id="submit">Submit</button>
+        </p>
+    </section>
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/questions.js"></script>
