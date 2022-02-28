@@ -1,7 +1,7 @@
 //DOM
 var questionsEl = document.querySelector("#questions");
 var timerEl = document.querySelector("#time");
-var answers = document.querySelector("#answers");
+var answersEl = document.querySelector("#answers");
 var submitBtn = document.querySelector("#submit");
 var startBtn = document.querySelector("#start");
 var initialsEl = document.querySelector("#initials");
@@ -37,9 +37,9 @@ function getQuestion () {
     currentQuestion.choices.forEach(function(answers, i) {
         var answersNode = document.createElement("button");
         answersNode.setAttribute("class", "answers");
-        answersNode.setAttribute("value", choice);
+        answersNode.setAttribute("value", answers);
 
-        answersNode.textContent = i + 1 + ", " + choice;
+        answersNode.textContent = i + 1 + ", " + answers;
 
         answersNode.onclick = questionClick;
 
@@ -71,9 +71,9 @@ function questionClick() {
       feedbackEl.setAttribute("class", "feedback hide");
     }, 1000);
 
-    currentQuestionIndex++;
+    questionIndex++;
   
-    if (currentQuestionIndex === questions.length) {
+    if (questionIndex === questions.length) {
       quizEnd();
     } else {
       getQuestion();
