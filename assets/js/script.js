@@ -12,6 +12,7 @@ var timerId;
 var time = questionsEl.length * 20;
 var questionIndex = 0;
 
+
 function startQuiz() {
     var startScreenEl = document.getElementById("start-prompt");
     startScreenEl.setAttribute("class", "hide");
@@ -49,7 +50,7 @@ function getQuestion () {
 
 function questionClick() {
     if (this.value !== questions[questionIndex].answer) {
-        time -= 15;
+        time = time - 15;
 
         if (time < 0) {
             time = 0;
