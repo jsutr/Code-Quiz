@@ -9,7 +9,7 @@ var feedbackEl = document.querySelector("#review");
 
 //Quiz Variables
 var timerId;
-var time = questions.length * 20;
+var time = questionsEl.length * 20;
 var questionIndex = 0;
 
 function startQuiz() {
