@@ -13,7 +13,7 @@ var time = questions.length * 20;
 var questionIndex = 0;
 
 function startQuiz() {
-    var startScreenEl = document.getElementById("start-screen");
+    var startScreenEl = document.getElementById("start-prompt");
     startScreenEl.setAttribute("class", "hide");
 
     questionsEl.removeAttribute("class");
@@ -29,21 +29,21 @@ function getQuestion () {
 
     var currentQuestion = questions[questionIndex];
 
-    var titleEl = document.getElementById("question-title");
+    var titleEl = document.getElementById("question");
     titleEl.textContent = currentQuestion.title;
 
-    choicesEl.innerHTML = "";
+    answersEl.innerHTML = "";
 
-    currentQuestion.choices.forEach(function(choice, i) {
-        var choiceNode = document.createElement("button");
-        choiceNode.setAttribute("class", "choice");
-        choiceNode.setAttribute("value", choice);
+    currentQuestion.choices.forEach(function(answers, i) {
+        var answersNode = document.createElement("button");
+        answersNode.setAttribute("class", "answers");
+        answersNode.setAttribute("value", choice);
 
-        choiceNode.textContent = i + 1 + ", " + choice;
+        answersNode.textContent = i + 1 + ", " + choice;
 
-        choiceNode.onclick = questionClick;
+        answersNode.onclick = questionClick;
 
-        choicesEl.appendChild(choiceNode);
+        answersEl.appendChild(answersNode);
     });
 }
 
